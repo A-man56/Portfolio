@@ -11,7 +11,7 @@ import {
   MonitorSmartphone,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 import Link from "next/link";
 import { cn, scrollTo } from "@/lib/utils";
 import Image from "next/image";
@@ -28,9 +28,9 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 const aboutStats = [
-  { label: "Years of experience", value: "3+" },
-  { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "15+" },
+  // { label: "Years of experience", value: "3+" },
+  // { label: "Technologies mastered", value: "5+" },
+  // { label: "Projects created", value: "15+" },
 ];
 
 const projects = [
@@ -62,7 +62,7 @@ const projects = [
     title: "This website",
     description: "My personal website",
     image: "/assets/portfolio.webm",
-    href: "https://github.com/wendoj/portfolio",
+    href: "",// enter github repo link
   },
 ];
 
@@ -206,7 +206,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  WendoJ.
+                  Amanjeet.
                 </span>
               </h1>
               <p
@@ -215,7 +215,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An experienced full-stack website developer with a passion for
+                An full-stack website developer with a passion for
                 crafting unique digital experiences.
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:wendoj@proton.me" passHref>
+              <Link href="mailto:singhamanjeet87@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
@@ -248,15 +248,16 @@ export default function Home() {
               <TriangleDownIcon className="mt-1 animate-bounce" />
             </div>
           </div>
-          <div
-            data-scroll
-            data-scroll-speed="-.01"
-            id={styles["canvas-container"]}
-            className="mt-14 h-full w-full xl:mt-0"
-          >
-            <Suspense fallback={<span>Loading...</span>}>
-              <Spline scene="/assets/scene.splinecode" />
-            </Suspense>
+          <div>
+            <Image
+              src="/assets/laptop.png"
+              alt="Amanjeet"
+              width={900}
+              height={900}
+              quality={100}
+              className="rounded-full"
+            />
+
           </div>
         </section>
 
@@ -269,19 +270,20 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I&apos;m an experienced full-stack developer proficient in{" "}
+              I&apos;m a full-stack developer proficient in{" "}
               <Link
-                href="https://create.t3.gg/"
-                target="_blank"
+                href="#"
                 className="underline"
               >
-                TypeScript, Tailwind, and Next.js
+                Javascript, TypeScript, Tailwind, and Next.js
               </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
-              companies, where I&apos;ve been instrumental in the entire product
-              design process; from ideation and wireframing, through
-              prototyping, to the delivery of the final product, all while
-              efficiently collaborating with cross-functional teams.
+              I have been passionate about building web applications
+               and designing user-friendly digital experiences. As a student of <strong><u>NIT Bhopal</u></strong>, 
+               I have worked on multiple projects, honing my skills in frontend 
+               and backend development. From conceptualizing ideas and creating 
+               wireframes to developing fully functional applications, I have gained 
+               hands-on experience through academic projects and personal explorations. 
+               I thrive on learning new technologies and collaborating with teams to bring ideas to life.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
@@ -373,7 +375,7 @@ export default function Home() {
               </Carousel>
               <div className="py-2 text-center text-sm text-muted-foreground">
                 <span className="font-semibold">
-                  {current} / {count}
+                  
                 </span>{" "}
                 projects
               </div>
