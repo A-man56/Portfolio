@@ -448,7 +448,7 @@ export default function Home() {
               I&apos;m currently available for freelance work and open to
               discussing new projects.
             </p>
-            <Link href="mailto:wendoj@proton.me" passHref>
+            <Link href="#" passHref>
               <Button className="mt-6">Get in touch</Button>
             </Link>
           </div>
